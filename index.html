@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YO'kiees - Homemade Artisanal Treats</title>
+    <meta name="description" content="YO'kiees Bakery - Specializing in homemade burnt cheesecakes, cookies, and brownies. Artisanal treats made with love.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="doc/YO'kiees_logo.png" alt="YO'kiees Logo" class="logo-img">
+                    <a href="#home">YO'kiees</a>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#menu" class="nav-link">Menu</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#contact" class="nav-cta">Pre-Order</a>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">YO'kiees</h1>
+            <p class="hero-tagline">Homemade Artisanal Treats</p>
+            <p class="hero-subtitle">Specializing in Burnt Cheesecakes, Cookies & Brownies</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">View Menu</a>
+                <a href="#contact" class="btn btn-secondary">Pre-Order Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Handcrafted with Love</h2>
+                    <p>Welcome to our sweet corner, where every bite is crafted to bring you joy. From melt-in-your-mouth cakes to creamy, handcrafted desserts, we believe happiness is best served fresh.</p>
+                    <p>Each treat is made with love, using the finest ingredients to create indulgent flavors you'll never forget. Whether you're celebrating a special moment or simply craving something delightful, our desserts are here to make every day a little sweeter.</p>
+                </div>
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <div class="floral-decoration"></div>
+                        <div class="logo-placeholder">
+                            <img src="doc/YO'kiees_logo.png" alt="YO'kiees Logo" class="about-logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title">Our Menu</h2>
+            <p class="section-subtitle">Freshly baked with premium ingredients</p>
+            
+            <div class="menu-grid">
+                <!-- Classic Cookie -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="doc/chocolate_chip_cookie.jpg" alt="Classic Cookie">
+                    </div>
+                    <h3 class="product-name">Classic Cookie</h3>
+                    <div class="product-price">฿15</div>
+                    <p class="product-description">Traditional homemade cookie with a perfect balance of sweetness</p>
+                    <div class="quantity-selector">
+                        <button class="qty-btn qty-minus">-</button>
+                        <span class="qty-display">1</span>
+                        <button class="qty-btn qty-plus">+</button>
+                    </div>
+                    <button class="btn-add">Add to Order</button>
+                </div>
+
+                <!-- Choco Cookie -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="doc/double_chocolate_cookie.jpg" alt="Choco Cookie">
+                    </div>
+                    <h3 class="product-name">Choco Cookie</h3>
+                    <div class="product-price">฿20</div>
+                    <p class="product-description">Rich chocolate chip cookie made with premium dark chocolate</p>
+                    <div class="quantity-selector">
+                        <button class="qty-btn qty-minus">-</button>
+                        <span class="qty-display">1</span>
+                        <button class="qty-btn qty-plus">+</button>
+                    </div>
+                    <button class="btn-add">Add to Order</button>
+                </div>
+
+                <!-- Brownie -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="doc/brownies.jpg" alt="Brownie">
+                    </div>
+                    <h3 class="product-name">Brownie</h3>
+                    <div class="product-price">฿50</div>
+                    <p class="product-description">Fudgy, decadent brownie with intense chocolate flavor</p>
+                    <div class="quantity-selector">
+                        <button class="qty-btn qty-minus">-</button>
+                        <span class="qty-display">1</span>
+                        <button class="qty-btn qty-plus">+</button>
+                    </div>
+                    <button class="btn-add">Add to Order</button>
+                </div>
+
+                <!-- Burnt Classic Cheesecake -->
+                <div class="product-card featured">
+                    <div class="product-image">
+                        <img src="doc/burn_cake.jpg" alt="Burnt Classic Cheesecake">
+                    </div>
+                    <h3 class="product-name">Burnt Classic Cheesecake</h3>
+                    <div class="product-sizes">
+                        <button class="size-option active" data-size="4" data-price="250">4": ฿250</button>
+                        <button class="size-option" data-size="6" data-price="400">6": ฿400</button>
+                    </div>
+                    <p class="product-description">Our signature burnt cheesecake with caramelized top and creamy center</p>
+                    <div class="quantity-selector">
+                        <button class="qty-btn qty-minus">-</button>
+                        <span class="qty-display">1</span>
+                        <button class="qty-btn qty-plus">+</button>
+                    </div>
+                    <button class="btn-add">Add to Order</button>
+                </div>
+
+                <!-- Burnt Matcha Cheesecake -->
+                <div class="product-card featured">
+                    <div class="product-image">
+                        <img src="doc/matcha-cheesecake.webp" alt="Burnt Matcha Cheesecake">
+                    </div>
+                    <h3 class="product-name">Burnt Matcha Cheesecake</h3>
+                    <div class="product-sizes">
+                        <button class="size-option active" data-size="4" data-price="300">4": ฿300</button>
+                        <button class="size-option" data-size="6" data-price="500">6": ฿500</button>
+                    </div>
+                    <p class="product-description">Premium matcha-infused burnt cheesecake with earthy sweetness</p>
+                    <div class="quantity-selector">
+                        <button class="qty-btn qty-minus">-</button>
+                        <span class="qty-display">1</span>
+                        <button class="qty-btn qty-plus">+</button>
+                    </div>
+                    <button class="btn-add">Add to Order</button>
+                </div>
+
+                <!-- Burnt Chocolate Cheesecake -->
+                <div class="product-card featured">
+                    <div class="product-image">
+                        <img src="doc/chocolat_cheeseckae.avif" alt="Burnt Chocolate Cheesecake">
+                    </div>
+                    <h3 class="product-name">Burnt Chocolate Cheesecake</h3>
+                    <div class="product-sizes">
+                        <button class="size-option active" data-size="4" data-price="300">4": ฿300</button>
+                        <button class="size-option" data-size="6" data-price="500">6": ฿500</button>
+                    </div>
+                    <p class="product-description">Decadent chocolate burnt cheesecake for chocolate lovers</p>
+                    <div class="quantity-selector">
+                        <button class="qty-btn qty-minus">-</button>
+                        <span class="qty-display">1</span>
+                        <button class="qty-btn qty-plus">+</button>
+                    </div>
+                    <button class="btn-add">Add to Order</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">Pre-order your favorite treats today!</p>
+            
+            <div class="contact-content">
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Your Phone">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Order details or message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Pre-Order</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="floral-bg"></div>
+                    <div class="info-content">
+                        <h3>Contact Information</h3>
+                        <div class="info-item">
+                            <strong>Facebook:</strong>
+                            <a href="https://www.facebook.com/profile.php?id=61579247530174" target="_blank">YO'kiees</a>
+                        </div>
+                        <div class="info-item">
+                            <strong>Instagram:</strong>
+                            <a href="https://instagram.com/yokiees_homemade" target="_blank">@yokiees_homemade</a>
+                        </div>
+                        <div class="info-item">
+                            <strong>Website:</strong>
+                            <a href="https://yokiees.com">yokiees.com</a>
+                        </div>
+                        <div class="info-item">
+                            <strong>Email:</strong>
+                            <a href="mailto:yae@yokiees.com">yae@yokiees.com</a>
+                        </div>
+                        <div class="pre-order-note">
+                            <h4>How to Pre-Order:</h4>
+                            <ol>
+                                <li>Browse our menu above</li>
+                                <li>Fill out the contact form with your order</li>
+                                <li>We'll confirm your order within 24 hours</li>
+                                <li>Pick up or delivery available (Chiang Mai area only)</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>YO'kiees</h3>
+                    <p>Handcrafted with Love, Baked to Perfection</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.facebook.com/profile.php?id=61579247530174" target="_blank" aria-label="Facebook">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/yokiees_homemade" target="_blank" aria-label="Instagram">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 YO'kiees. All rights reserved. Made with love.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
