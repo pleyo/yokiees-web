@@ -40,12 +40,16 @@ body {
     background-color: var(--warm-white);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
+    min-width: 100%;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Typography */
@@ -713,6 +717,58 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+    /* Critical mobile fixes for width and layout */
+    html {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    body {
+        width: 100%;
+        overflow-x: hidden;
+        position: relative;
+    }
+    
+    /* Fix all containers to prevent overflow */
+    section {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .container {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+    
+    /* Disable ALL animations on mobile to prevent flickering */
+    *, *::before, *::after {
+        animation-duration: 0s !important;
+        animation-delay: 0s !important;
+    }
+    
+    .fade-in {
+        animation: none !important;
+        opacity: 1 !important;
+    }
+    
+    .hero-content * {
+        animation: none !important;
+    }
+    
+    .product-card {
+        transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+        animation: none !important;
+    }
+    
+    /* Navigation fixes */
+    .nav-container {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -721,9 +777,10 @@ h1, h2, h3, h4, h5, h6 {
         background: rgba(255, 255, 255, 0.98);
         width: 100%;
         text-align: center;
-        transition: 0.3s;
+        transition: left 0.3s ease;
         box-shadow: var(--shadow-lg);
         padding: 2rem 0;
+        box-sizing: border-box;
     }
 
     .nav-menu.active {
@@ -750,82 +807,156 @@ h1, h2, h3, h4, h5, h6 {
         transform: translateY(-9px) rotate(-45deg);
     }
 
-    .about-content,
-    .contact-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
+    /* Hero section mobile optimization */
     .hero {
+        width: 100%;
         min-height: 100vh;
-        padding: 80px 15px 40px;
+        padding: 100px 0 40px;
+        overflow: hidden;
+        box-sizing: border-box;
     }
     
     .hero-content {
-        padding: 0 10px;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    
+    /* Hide blobs completely on mobile */
+    .blob {
+        display: none !important;
     }
     
     .hero-buttons {
         flex-direction: column;
         align-items: center;
         gap: 0.75rem;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
     }
 
     .btn {
-        width: 200px;
+        width: 90%;
+        max-width: 250px;
         text-align: center;
-        padding: 0.9rem 1.5rem;
-        font-size: 0.95rem;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        box-sizing: border-box;
     }
 
-    .menu-grid {
+    /* About section mobile fixes */
+    .about {
+        width: 100%;
+        padding: 3rem 0;
+        overflow: hidden;
+    }
+    
+    .about-content {
         grid-template-columns: 1fr;
-        padding: 0 15px;
+        gap: 2rem;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .about-text {
+        width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .about-text p {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+    }
+    
+    .about-image {
+        width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Menu section complete mobile overhaul */
+    .menu {
+        width: 100%;
+        padding: 3rem 0;
+        overflow: hidden;
+    }
+    
+    .menu-grid {
+        display: flex;
+        flex-direction: column;
         gap: 1.5rem;
+        width: 100%;
+        padding: 0;
+        box-sizing: border-box;
     }
     
     .product-card {
-        max-width: 100%;
+        width: calc(100% - 30px);
+        max-width: 400px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        opacity: 1 !important;
+    }
+    
+    .product-image {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+    }
+    
+    .product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
     
     .product-sizes {
         gap: 0.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     
     .size-option {
         padding: 0.6rem 1rem;
         font-size: 0.9rem;
+        flex: 1;
+        min-width: 80px;
     }
 
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
+    /* Contact section mobile fixes */
+    .contact {
+        width: 100%;
+        padding: 3rem 0;
+        overflow: hidden;
     }
     
-    .footer-links {
-        display: flex;
-        gap: 1rem;
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        width: 100%;
+        padding: 0;
     }
     
-    .footer-links a {
-        margin: 0;
+    .contact-form-wrapper {
+        width: 100%;
+        padding: 0;
+        box-sizing: border-box;
     }
     
-    /* Blob animations - reduce size on mobile */
-    .blob-1 {
-        width: 200px;
-        height: 200px;
+    .contact-info {
+        width: 100%;
+        padding: 0;
+        box-sizing: border-box;
     }
     
-    .blob-2 {
-        width: 150px;
-        height: 150px;
-    }
-    
-    .blob-3 {
-        width: 175px;
-        height: 175px;
+    .info-content {
+        padding: 2rem 1.5rem;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     /* Form inputs - prevent zoom on iOS */
@@ -834,51 +965,51 @@ h1, h2, h3, h4, h5, h6 {
     input[type="tel"],
     textarea {
         font-size: 16px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Footer mobile optimization */
+    .footer {
+        width: 100%;
+        overflow: hidden;
     }
     
-    /* About section adjustments */
-    .about {
-        padding: 3rem 0;
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        width: 100%;
     }
     
-    .about-text {
-        padding: 0 15px;
+    .footer-links {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
     }
     
-    .about-text p {
-        font-size: 0.95rem;
-        line-height: 1.7;
+    .footer-links a {
+        margin: 0;
     }
     
-    /* Contact section adjustments */
-    .contact {
-        padding: 3rem 0;
-    }
-    
-    .contact-form-wrapper,
-    .contact-info {
-        padding: 0 15px;
-    }
-    
-    .info-content {
-        padding: 2rem 1.5rem;
-    }
-    
-    /* Menu section adjustments */
-    .menu {
-        padding: 3rem 0;
-    }
-    
-    /* Section titles */
+    /* Typography adjustments for mobile */
     .section-title {
         font-size: 1.75rem;
-        padding: 0 15px;
+        padding: 0;
+        margin-bottom: 0.75rem;
     }
     
     .section-subtitle {
         font-size: 0.95rem;
-        padding: 0 20px;
+        padding: 0;
         margin-bottom: 2rem;
+    }
+    
+    /* Fix any potential overflow from decorative elements */
+    .floral-decoration,
+    .floral-bg {
+        max-width: 100%;
+        overflow: hidden;
     }
 }
 

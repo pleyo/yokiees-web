@@ -205,25 +205,32 @@ function updateOrderSummary() {
     messageField.value = orderSummary;
 }
 
-// Intersection Observer for fade-in animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
+// Intersection Observer for fade-in animations - ONLY ON DESKTOP
+if (window.innerWidth > 768) {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
-            observer.unobserve(entry.target);
-        }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe all sections and cards
+    document.querySelectorAll('.about, .menu, .contact, .product-card').forEach(el => {
+        observer.observe(el);
     });
-}, observerOptions);
-
-// Observe all sections and cards
-document.querySelectorAll('.about, .menu, .contact, .product-card').forEach(el => {
-    observer.observe(el);
-});
+} else {
+    // On mobile, just make everything visible immediately
+    document.querySelectorAll('.about, .menu, .contact, .product-card').forEach(el => {
+        el.style.opacity = '1';
+    });
+}
 
 // Add loading animation to images
 document.querySelectorAll('.product-image img').forEach(img => {
