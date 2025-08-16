@@ -694,6 +694,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Responsive Design */
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    .menu-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .about-content {
+        gap: 3rem;
+    }
+    
+    .contact-content {
+        gap: 3rem;
+    }
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
     .nav-menu {
         position: fixed;
@@ -738,25 +756,164 @@ h1, h2, h3, h4, h5, h6 {
         gap: 2rem;
     }
 
+    .hero {
+        min-height: 100vh;
+        padding: 80px 15px 40px;
+    }
+    
+    .hero-content {
+        padding: 0 10px;
+    }
+    
     .hero-buttons {
         flex-direction: column;
         align-items: center;
+        gap: 0.75rem;
     }
 
     .btn {
         width: 200px;
         text-align: center;
+        padding: 0.9rem 1.5rem;
+        font-size: 0.95rem;
     }
 
     .menu-grid {
         grid-template-columns: 1fr;
-        max-width: 400px;
-        margin: 3rem auto 0;
+        padding: 0 15px;
+        gap: 1.5rem;
+    }
+    
+    .product-card {
+        max-width: 100%;
+    }
+    
+    .product-sizes {
+        gap: 0.5rem;
+    }
+    
+    .size-option {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
     }
 
     .footer-content {
         flex-direction: column;
         text-align: center;
+        gap: 1rem;
+    }
+    
+    .footer-links {
+        display: flex;
+        gap: 1rem;
+    }
+    
+    .footer-links a {
+        margin: 0;
+    }
+    
+    /* Blob animations - reduce size on mobile */
+    .blob-1 {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .blob-2 {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .blob-3 {
+        width: 175px;
+        height: 175px;
+    }
+    
+    /* Form inputs - prevent zoom on iOS */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        font-size: 16px;
+    }
+    
+    /* About section adjustments */
+    .about {
+        padding: 3rem 0;
+    }
+    
+    .about-text {
+        padding: 0 15px;
+    }
+    
+    .about-text p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+    
+    /* Contact section adjustments */
+    .contact {
+        padding: 3rem 0;
+    }
+    
+    .contact-form-wrapper,
+    .contact-info {
+        padding: 0 15px;
+    }
+    
+    .info-content {
+        padding: 2rem 1.5rem;
+    }
+    
+    /* Menu section adjustments */
+    .menu {
+        padding: 3rem 0;
+    }
+    
+    /* Section titles */
+    .section-title {
+        font-size: 1.75rem;
+        padding: 0 15px;
+    }
+    
+    .section-subtitle {
+        font-size: 0.95rem;
+        padding: 0 20px;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-tagline {
+        font-size: 1.25rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .product-card {
+        border-radius: 12px;
+    }
+    
+    .product-name {
+        font-size: 1.1rem;
+    }
+    
+    .product-price {
+        font-size: 1.5rem;
+    }
+    
+    .quantity-selector {
         gap: 1rem;
     }
 }
